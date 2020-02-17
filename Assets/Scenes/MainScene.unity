@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6394309, g: 0.5657312, b: 0.4973147, a: 1}
+  m_IndirectSpecularColor: {r: 0.641185, g: 0.5658049, b: 0.49724114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 108828862}
   - component: {fileID: 108828861}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DirectivePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -225, y: -50}
-  m_SizeDelta: {x: -550, y: -400}
+  m_AnchoredPosition: {x: -225, y: -25}
+  m_SizeDelta: {x: -550, y: -250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108828861
 MonoBehaviour:
@@ -852,6 +852,14 @@ PrefabInstance:
     - target: {fileID: 11400002, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
       propertyPath: backwardSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40046bae76ac54bffb59f14f47d9ba1b, type: 3}
@@ -1761,7 +1769,7 @@ Light:
   m_BounceIntensity: 5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.17033e-40, y: NaN, z: 2.0805e-41, w: 1.1754944e-38}
+  m_BoundingSphereOverride: {x: 1.3468e-41, y: 1.02e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 9.2
@@ -1773,7 +1781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -10.1, y: 27.06, z: 17.65}
+  m_LocalPosition: {x: 100, y: 100, z: 17.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2972,8 +2980,9 @@ GameObject:
   - component: {fileID: 1697889829}
   - component: {fileID: 1697889831}
   - component: {fileID: 1697889830}
+  - component: {fileID: 1697889832}
   m_Layer: 5
-  m_Name: InventoryBase
+  m_Name: InventoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3007,8 +3016,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 280, y: -100}
-  m_SizeDelta: {x: -600, y: -240}
+  m_AnchoredPosition: {x: 280, y: -22.5}
+  m_SizeDelta: {x: -600, y: -85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1697889830
 MonoBehaviour:
@@ -3046,6 +3055,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697889828}
   m_CullTransparentMesh: 0
+--- !u!114 &1697889832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697889828}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd6ed0a974f977449b8a300b5e6a98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv: {fileID: 1697889828}
+  active: 0
 --- !u!1 &1865464369
 GameObject:
   m_ObjectHideFlags: 0
