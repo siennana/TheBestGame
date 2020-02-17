@@ -7,12 +7,17 @@ public class DisplayInventory : MonoBehaviour
     public GameObject inv; // assign in editor
     public bool active;
 
+    private void Start()
+    {
+        SetInventoryInactive();
+    }
+
     private void Update() // called once per frame
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Debug.Log("I pressed!");
-            //SetInventoryActive();
+            Debug.Log("I pressed");
+            SetInventoryActive();
         } 
         else
         {
@@ -25,12 +30,14 @@ public class DisplayInventory : MonoBehaviour
     {
         active = true;
         inv.SetActive(active);
+        Debug.Log("Inventory active");
     }
 
     private void SetInventoryInactive()
     {
         active = false;
         inv.SetActive(active);
+        Debug.Log("Inventory Inactive");
     }
 
 }
