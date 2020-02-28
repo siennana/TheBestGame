@@ -9,8 +9,7 @@ public class DisplayInventory : MonoBehaviour
 
     private void Start()
     {
-    //    SetInventoryInactive();
-        
+        inv.SetActive(false);        
     }
 
     private void Update() // called once per frame
@@ -20,7 +19,6 @@ public class DisplayInventory : MonoBehaviour
         {
             Debug.Log("I pressed");
             active = !active;
-            Debug.Log(active);
             inv.SetActive(active);
         } 
     }
